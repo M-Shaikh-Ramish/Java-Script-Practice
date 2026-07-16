@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Assignment: Profile Card</title>
+    <style>
+        /* 1. RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 2. CARD CONTAINER */
+        .profile-card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 350px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect on the card */
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 3. CARD HEADER (Background banner) */
+        .card-header {
+            height: 120px;
+            background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        }
+
+        /* 4. PROFILE IMAGE */
+        .avatar-container {
+            margin-top: -60px; /* Pulls the image up into the banner */
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        /* 5. CARD BODY (Text content) */
+        .card-body {
+            padding: 25px;
+        }
+
+        .name {
+            font-size: 24px;
+            color: #333333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #764ba2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .bio {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* 6. BUTTONS / ACTIONS */
+        .btn-follow {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+            transition: background 0.3s ease, opacity 0.3s;
+        }
+
+        .btn-follow:hover {
+            opacity: 0.9;
+        }
+
+        .btn-follow:active {
+            transform: scale(0.98);
+        }
+
+        /* 7. STATS SECTION */
+        .card-footer {
+            background-color: #f8f9fa;
+            display: flex;
+            border-top: 1px solid #eeeeee;
+            padding: 20px 0;
+        }
+
+        .stat-box {
+            flex: 1;
+            border-right: 1px solid #eeeeee;
+        }
+
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-count {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #888888;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="card-header"></div>
+        
+        <div class="avatar-container">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="avatar">
+        </div>
+        
+        <div class="card-body">
+            <h2 class="name">Alex Morgan</h2>
+            <p class="title">UI/UX Designer</p>
+            <p class="bio">Passionate about creating clean, accessible, and user-centric digital experiences. Let's build something amazing together!</p>
+            <button class="btn-follow">Follow</button>
+        </div>
+        
+        <div class="card-footer">
+            <div class="stat-box">
+                <span class="stat-count">12.5k</span>
+                <span class="stat-label">Followers</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-count">480</span>
+                <span class="stat-label">Following</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-count">42</span>
+                <span class="stat-label">Projects</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
